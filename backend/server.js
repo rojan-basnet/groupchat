@@ -3,9 +3,7 @@ import dotenv from 'dotenv'
 import cors from 'cors'
 import { WebSocketServer } from 'ws'
 import http from 'http'
-import { text } from 'stream/consumers'
-import { type } from 'os'
-import { count } from 'console'
+import path from 'path'
 
 const app=express()
 app.use(cors()) 
@@ -14,7 +12,7 @@ dotenv.config()
 const server=http.createServer(app)
 const wss=new WebSocketServer({server})
 const PORT=process.env.PORT||5000
-
+const __dirname=path.resolve()
 
 function broadcast(data){
     wss.clients.forEach(client=>{
@@ -43,6 +41,14 @@ wss.on("connection",(ws)=>{
 
 })
 
+if(process.env.NODE_ENV==="production"){
+    const frontendPath = path.join(__dirname, 'frontend', 'dist');
+    app.use(express.static(frontendPath));
+
+    app.use((req, res) => {
+        res.sendFile(path.join(frontendPath, "index.html"));
+    });
+}
 
 server.listen(PORT,()=>{
     console.log(`Listening on port : ${PORT}`)
