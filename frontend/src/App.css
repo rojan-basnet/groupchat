@@ -1,0 +1,59 @@
+
+body{
+    box-sizing: border-box;
+    font-family:Arial, Helvetica, sans-serif ;
+}
+
+/* Center container on screen */
+.loginContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: linear-gradient(135deg, #1e3c72, #2a5298);
+  font-family: Arial, sans-serif;
+}
+
+/* Card style for form */
+.loginContainer form {
+  background: #fff;
+  padding: 2rem 3rem;
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.2);
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: 300px;
+  text-align: center;
+}
+
+/* Input styling */
+.loginContainer form input {
+  padding: 0.8rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+  outline: none;
+  transition: 0.2s;
+}
+
+.loginContainer form :focus {
+  border-color: #2a5298;
+  box-shadow: 0 0 5px rgba(42, 82, 152, 0.5);
+}
+
+/* Button styling */
+.loginContainer button {
+  padding: 0.8rem;
+  background: #2a5298;
+  color: #fff;
+  font-size: 1rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.loginContainer button:hover {
+  background: #1e3c72;
+}

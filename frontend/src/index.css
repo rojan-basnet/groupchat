@@ -1,0 +1,99 @@
+.mainGrpChatContainer {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  max-width: 600px;
+  margin: 0 auto;
+  background-color: #ffffff;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+}
+
+.Counter {
+  padding: 12px 16px;
+  background-color: #f8f8f8;
+  border-bottom: 1px solid #e5e5e5;
+  font-size: 14px;
+  color: #262626;
+  font-weight: 600;
+  text-align: center;
+}
+
+.displayMsgs {
+  flex: 1;
+  overflow-y: auto;
+  padding: 16px;
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.displayMsgs > div {
+  display: flex;
+  flex-direction: column;
+  max-width: 70%;
+  padding: 8px 12px;
+  border-radius: 18px;
+  background-color: #f1f0f0;
+  margin-bottom: 4px;
+}
+
+.displayMsgs > div p {
+  font-size: 12px;
+  color: #8e8e8e;
+  margin: 0 0 4px 0;
+}
+
+.displayMsgs > div h3 {
+  font-size: 15px;
+  color: #262626;
+  margin: 0;
+  font-weight: normal;
+}
+
+.mainGrpChatContainer > div:last-child {
+  padding: 12px 16px;
+  background-color: #ffffff;
+  border-top: 1px solid #e5e5e5;
+}
+
+.mainGrpChatContainer > div:last-child form {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.mainGrpChatContainer > div:last-child form input[type="text"] {
+  flex: 1;
+  padding: 10px 14px;
+  border: 1px solid #dbdbdb;
+  border-radius: 20px;
+  font-size: 14px;
+  outline: none;
+  background-color: #fafafa;
+}
+
+.mainGrpChatContainer > div:last-child form input[type="text"]:focus {
+  border-color: #0095f6;
+}
+
+.mainGrpChatContainer > div:last-child form button {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 20px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.mainGrpChatContainer > div:last-child form button:not(:disabled) {
+  background-color: #0095f6;
+  color: #ffffff;
+}
+
+.mainGrpChatContainer > div:last-child form button:disabled {
+  background-color: #b2dffc;
+  color: #ffffff;
+  cursor: not-allowed;
+}
