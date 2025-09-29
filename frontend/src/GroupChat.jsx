@@ -11,7 +11,7 @@ const [message,setMessage]=useState({user:user,message:""})
 const [count,setCount]=useState(0)
 const scrollRef=useRef()
 useEffect(()=>{
-  const ws=new WebSocket(`ws:${import.meta.env.VITE_SERVER_URL}`)
+  const ws=new WebSocket(`${import.meta.env.VITE_SERVER_URL}`)
 
   ws.onopen=()=>{
     console.log("Client Connected")
